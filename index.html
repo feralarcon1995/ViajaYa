@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=====FAVICON ======-->
+    <link rel="shortcut icon" href="Img/favicon.png" type="image/png">
+    <!---============ REMIX ICON ============---->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!--============- LINK BOOTSTRAPT ============----->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--============-LINK AL CSS============---->
+    <link rel="stylesheet" href="Css/estilo.css" id="tema">
+
+
+    <title>ViajaYA</title>
+</head>
+
+<body>
+    <header>
+        <!----============ NAVEGADOR ================----->
+        <nav class="navbar fixed-top nevegador ">
+            <h2 class="navbar-brand mb-0 h1 nav__logo">ViajaYA</h2>
+            <ul class="nav__menu justify-content-end">
+                <li><a href="#index">Inicio</a></li>
+                <li><a href="#usuario">Cotizar</a></li>
+                <li><a href="#destino">Destino</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li>
+                    <label class="nav-item nav-link switch ">
+                        <input type="checkbox" class="modeBtn" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+            </ul>
+            <button class="nav__hamburguesa" type="button">
+                <span class="br-1"></span>
+                <span class="br-2"></span>
+                <span class="br-3"></span>
+            </button>
+        </nav>
+
+
+        <!---============SECCION PRINCIPAL DE LA WEB============ -->
+        <section class="home" id="index">
+
+            <h1 class="home__titulo">
+                <span class="home__span">Descubre tu aventura</span>
+                Explora las Mejores Vacaciones en <b>VIAJAYA</b>
+            </h1>
+            <h2 class="home__subTitulo2" id="scroll">Disfruta de nuestro descuento del<span class="home__span2">
+                    %30</span>Para que vivas la mejor experiencia </h2>
+
+        </section>
+    </header>
+
+    <!---========PIDIENDO DATOS============--->
+    <section class="usuario" id="usuario">
+        <h2 class="usuario__titulo"> Ingrese sus datos y vea nuestras ofertas</h2>
+        <!----============COMIENZO DEL FORMULARIO DE USUARIO============------>
+        <form action="#" class="usuarioForm">
+            <div class="usuarioForm__datos">
+                <label for="nombre" class="usuarioForm__label">
+                    Nombre
+                </label>
+                <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre"
+                    class="usuarioForm__input input1">
+
+                <label for="apellido" class="usuarioForm__label">
+                    Apellido
+                </label>
+                <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido"
+                    class="usuarioForm__input input2">
+
+                <label for="edad" class="usuarioForm__label">
+                    Edad
+                </label>
+                <input type="number" name="edad" id="edad" placeholder="Ingrese su edad"
+                    class="usuarioForm__input input3">
+            </div>
+
+            <div class="usuarioForm__selects">
+                <label for="select" class="usuarioForm__label">
+                    Boleto
+                </label>
+                <select name="select" class="usuarioForm__select select1">
+                    <option selected>Primera Clase</option>
+                    <option>Clase Economica</option>
+                </select>
+
+                <label for="select" class="usuarioForm__label">
+                    Menu y Bar
+                </label>
+                <select name="select" class="usuarioForm__select select2">
+                    <option selected>Menu Gourmet</option>
+                    <option>Menu Vegano</option>
+                    <option>Menu Celiaco</option>
+                </select>
+
+                <label for="select" class="usuarioForm__label">
+                    Estadia
+                </label>
+                <select name="select" class="usuarioForm__select select3">
+                    <option value='3' selected>3 días y 2 noches</option>
+                    <option value='7'>7 días y 6 noches</option>
+                    <option value='10'>10 días y 9 noches</option>
+                    <option value='14'>14 días y 13 noches</option>
+                </select>
+            </div>
+
+
+
+        </form>
+    </section>
+    <!---========SECCION TRES DE DESTINOS========------>
+    <section class="destino" id="destino">
+        <div class="destino__contenido">
+            <ul class="destino__lista">
+                <!---========MIAMI========------>
+                <li class="destino__item">
+                    <img src="img/miami.jpg" alt="Miami">
+                    <div class="destino__container">
+                        <p class="destino__nombre">Miami </p>
+                        <p class="destino__precio">Precio: $700.000</p>
+                        <button class="destino__btn" value=0 id="btn0">Seleccionar</button>
+                    </div>
+                </li>
+                <!---========LAS VEGAS========------>
+                <li class="destino__item">
+                    <img src="img/lasvegas.jpg" alt="Las Vegas">
+                    <div class="destino__container">
+                        <p class="destino__nombre">Las Vegas</p>
+                        <p class="destino__precio">Precio: $600.000</p>
+                        <button class="destino__btn" value=1 id="btn2">Seleccionar</button>
+                    </div>
+                </li>
+                <!---========RIO DE JANEIRO========------>
+                <li class="destino__item">
+                    <img src="img/riojaneiro.jpg" alt="Rio de Janeiro">
+                    <div class="destino__container">
+                        <p class="destino__nombre">Rio de Janeiro</p>
+                        <p class="destino__precio">Precio: $120.000</p>
+                        <button class="destino__btn" value=2 id="btn3">Seleccionar</button>
+                    </div>
+                </li>
+                <!---========BUZIOS-============----->
+                <li class="destino__item">
+                    <img src="img/buzios.jpg" alt="Buzios">
+                    <div class="destino__container">
+                        <p class="destino__nombre">Buzios</p>
+                        <p class="destino__precio">Precio: $100.000</p>
+                        <button class="destino__btn" value=3 id="btn4">Seleccionar</button>
+                    </div>
+                </li>
+                <!----======--VIÑA DEL MAR---============--->
+                <li class="destino__item">
+                    <img src="img/viñamar.jpg" alt="Viña del Mar">
+                    <div class="destino__container">
+                        <p class="destino__nombre">Viña del mar</p>
+                        <p class="destino__precio">Precio: $80.000</p>
+                        <button class="destino__btn" value=4 id="btn5">Seleccionar</button>
+                    </div>
+                </li>
+                <!--========-BARILOCHE-========----->
+                <li class="destino__item">
+                    <img src="img/bariloche.jpg" alt="Bariloche">
+                    <div class="destino__container">
+                        <p class="destino__nombre">Bariloche</p>
+                        <p class="destino__precio">Precio: $90.000</p>
+                        <button class="destino__btn" value=5 id="btn6"> Seleccionar</button>
+                    </div>
+                </li>
+                <!---- ======= ISLAS MALDIVIAS =====-->
+            <li class="destino__item">
+                <img src="img/valdivias.jpg" alt="Islas Maldivas">
+                <div class="destino__container">
+                    <p class="destino__nombre">Islas Maldivas</p>
+                    <p class="destino__precio">Precio: $290.000</p>
+                    <button class="destino__btn" value=6 id="btn7">Seleccionar</button>
+                </div>
+            </li>
+            <!---===== CANCUNN =====-->
+            <li class="destino__item">
+                <img src="img/cancun.jpg" alt="Cancun">
+                <div class="destino__container">
+                    <p class="destino__nombre">Cancun</p>
+                    <p class="destino__precio">Precio: $150.000</p>
+                    <button class="destino__btn" value=7 id="btn8">Seleccionar</button>
+                </div>
+            </li>
+            <!--======== MARBELLA ========-->
+            <li class="destino__item">
+                <img src="img/marbella.jpg" alt="Marbella">
+                <div class="destino__container">
+                    <p class="destino__nombre">Marbella</p>
+                    <p class="destino__precio">Precio: $200.000</p>
+                    <button class="destino__btn" value=8 id="btn9">Seleccionar</button>
+                </div>
+            </li>
+            </ul>
+            
+            <!--Dolar -->
+            <div class="seccionDolar">
+                <h2 class="seccionDolar__titulo">Actualizacion del dolar</h2>
+                <div id="lista__dolares" class="d-principal"></div>
+            </div>
+            <!--Destinos Seleccionados-->
+            <div id="destino__seleccionado">
+
+            </div>
+            <!---Reservaciones-->
+            <div id="destino__reservacion">
+                <div class="reservas">
+                    <h2 class="reservas__titulo">
+                        <span class="reservas__titulo"><i class="ri-calendar-check-fill"></i></span>
+                        Reservaciones
+                    </h2>
+                    <button class="btn__reserva" id="reservas__btn">Mostrar Reservas</button>
+                </div>
+                <div id="reservas__hechas" class="reservas__hechas"></div>
+            </div>
+          
+            
+
+        </div>
+    </section>
+    <!--========--SECCION TRES DE CONTACTO ============------>
+    <section class="contacto" id="contacto">
+        <h2 class="contacto__titulo">
+            Contacto
+        </h2>
+        <div class="contacto__img">
+            <img src="img/contacto.jpg" alt="contacto">
+        </div>
+        <!--========--COMIENZO DEL FORMULARIO DE CONTACTO---========--->
+        <div id="formulario">
+            <form action="#" class="formulario" id="formdata">
+                <label for="nombre" class="formulario__label">
+                    Nombre
+                </label>
+                <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" class="formulario__input">
+
+                <label for="apellido" class="formulario__label">
+                    Apellido
+                </label>
+                <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido"
+                    class="formulario__input">
+
+                <label for="mail" class="formulario__label">
+                    E-mail
+                </label>
+                <input type="text" name="mail" id="mail" placeholder="example@viajeya.com" class="formulario__input">
+
+                <label for="comentario" class="formulario__label">
+                    Mensaje
+                </label>
+                <textarea name="comentario" id="textarea" cols="50" rows="10" placeholder="Deja aqui tu mensaje"
+                    class="formulario__textarea"></textarea>
+
+                <button type="button" class="formulario__btn" id="botonenviar">Enviar</button>
+
+            </form>
+        </div>
+    </section>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__data">
+                    <h3 class="footer__titulo">ViajaYA</h3>
+                    <p class="footer__descripcion">Escoge tu<br>destino,
+                        te ofrecemos <br> la experiencia.
+                    </p>
+                    <div>
+                        <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="footer__social">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitulo">Nosotros</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Sobre Nosotros</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Características</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Nuestro Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitulo">Empresa</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Equipo</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Plan y Precios</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Become a member</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitulo">Soporte</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">FAQs</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Centro de Soporte</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__derechos">
+                <p class="footer__creador">&#169; 2021 <a href="https://www.linkedin.com/in/feralarcon1995/"
+                        target="_blank">Fernando Alarcon</a>. Derechos Reservados.</p>
+                <div class="footer__terminos">
+                    <a href="#" class="footer__terminos-link">Terminos y Condiciones</a>
+                    <a href="#" class="footer__terminos-link">Politica de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!---=====LINK JQUERY=========------->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!---=======LINK BOOTSTRAPT ==========---->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <!---======== LINK AL JAVASCRIPT==========-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
