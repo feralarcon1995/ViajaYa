@@ -38,7 +38,7 @@ header {
     list-style-type: none;
     transition: .3s; }
   .nav__menu li a {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     color: #fff;
     text-decoration: none;
     background-image: linear-gradient(#fff, #eee);
@@ -76,7 +76,7 @@ header {
 .navegador__activo {
   background-color: #fff;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.29);
-  height: 15vh; }
+  height: 5rem; }
   .navegador__activo h2 {
     color: #14505c;
     align-self: flex-start; }
@@ -157,7 +157,7 @@ input:checked + .slider:before {
   padding: 9.375rem; }
   .home__titulo {
     grid-area: titulo;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -166,7 +166,7 @@ input:checked + .slider:before {
     padding-left: 1.875rem; }
   .home__subTitulo2 {
     grid-area: descuento;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -183,7 +183,7 @@ input:checked + .slider:before {
     font-size: 1.5rem; }
   .home__span2 {
     font-size: 10rem;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     border-right: 4px solid;
     border-left: 4px solid;
     padding: 0px 1.25rem;
@@ -559,7 +559,7 @@ input:checked + .slider:before {
   padding: 1.875rem; }
   .contacto__titulo {
     grid-area: titulo;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: bold;
     font-size: 2.5rem;
     padding: 2.5rem;
@@ -708,7 +708,7 @@ input:checked + .slider:before {
   .navegador__activo {
     background-color: #fff;
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.29);
-    height: 15vh;
+    height: 5rem;
     justify-content: center; }
   .navegador__activo ul li a {
     color: #14505c; }
@@ -717,8 +717,7 @@ input:checked + .slider:before {
   .nav__hamburguesa {
     display: block;
     position: absolute;
-    top: 10px;
-    right: 30px;
+    right: 1.875rem;
     transition: 0.2s; }
   .nav__hamburguesa:hover {
     transform: rotate(360deg); }
@@ -734,10 +733,10 @@ input:checked + .slider:before {
   .nav__menu li {
     width: 100%;
     text-align: center;
-    padding: 20px; }
+    padding: 1.25rem; }
   .nav__menu li a {
     color: #14505c;
-    padding: 30px; }
+    padding: 1.875rem; }
   @keyframes mostrarMenu {
     from {
       opacity: 0; }
@@ -815,21 +814,21 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 25px 0; }
+    padding: 25px 0;
+    height: 5rem; }
   .navegador__activo {
     background-color: #fff;
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.29);
-    height: 14vh;
+    height: 5rem;
     justify-content: center; }
   .navegador__activo ul li a {
     color: #14505c; }
   .nav__logo {
-    padding-left: 25px; }
+    padding-left: 1.5625rem; }
   .nav__hamburguesa {
     display: block;
     position: absolute;
-    top: 10px;
-    right: 30px;
+    right: 1.875rem;
     transition: 0.2s; }
   .nav__hamburguesa:hover {
     transform: rotate(360deg); }
