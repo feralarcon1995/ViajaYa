@@ -130,7 +130,8 @@
                     <div class="destino__container">
                         <p class="destino__nombre">Miami </p>
                         <p class="destino__precio">Precio: $700.000</p>
-                        <button class="destino__btn" value=0 id="btn0">Seleccionar</button>
+                        <a href="#destino__seleccionado"><button class="destino__btn" value=0 id="btn0">Seleccionar
+                            </button></a>
                     </div>
                 </li>
                 <!---========LAS VEGAS========------>
@@ -139,7 +140,8 @@
                     <div class="destino__container">
                         <p class="destino__nombre">Las Vegas</p>
                         <p class="destino__precio">Precio: $600.000</p>
-                        <button class="destino__btn" value=1 id="btn2">Seleccionar</button>
+                        <a href="#destino__seleccionado"><button class="destino__btn" value=1
+                                id="btn2">Seleccionar</button></a>
                     </div>
                 </li>
                 <!---========RIO DE JANEIRO========------>
@@ -148,7 +150,8 @@
                     <div class="destino__container">
                         <p class="destino__nombre">Rio de Janeiro</p>
                         <p class="destino__precio">Precio: $120.000</p>
-                        <button class="destino__btn" value=2 id="btn3">Seleccionar</button>
+                        <a href="#destino__seleccionado"><button class="destino__btn" value=2
+                                id="btn3">Seleccionar</button></a>
                     </div>
                 </li>
                 <!---========BUZIOS-============----->
@@ -157,7 +160,8 @@
                     <div class="destino__container">
                         <p class="destino__nombre">Buzios</p>
                         <p class="destino__precio">Precio: $100.000</p>
-                        <button class="destino__btn" value=3 id="btn4">Seleccionar</button>
+                        <a href="#destino__seleccionado"><button class="destino__btn" value=3
+                                id="btn4">Seleccionar</button></a>
                     </div>
                 </li>
                 <!----======--VIÑA DEL MAR---============--->
@@ -166,7 +170,8 @@
                     <div class="destino__container">
                         <p class="destino__nombre">Viña del mar</p>
                         <p class="destino__precio">Precio: $80.000</p>
-                        <button class="destino__btn" value=4 id="btn5">Seleccionar</button>
+                        <a href="#destino__seleccionado"><button class="destino__btn" value=4
+                                id="btn5">Seleccionar</button></a>
                     </div>
                 </li>
                 <!--========-BARILOCHE-========----->
@@ -175,7 +180,8 @@
                     <div class="destino__container">
                         <p class="destino__nombre">Bariloche</p>
                         <p class="destino__precio">Precio: $90.000</p>
-                        <button class="destino__btn" value=5 id="btn6"> Seleccionar</button>
+                        <a href="#destino__seleccionado"><button class="destino__btn" value=5 id="btn6">
+                                Seleccionar</button></a>
                     </div>
                 </li>
                 <!---- ======= ISLAS MALDIVIAS =====-->
@@ -184,7 +190,8 @@
                     <div class="destino__container">
                         <p class="destino__nombre">Islas Maldivas</p>
                         <p class="destino__precio">Precio: $290.000</p>
-                        <button class="destino__btn" value=6 id="btn7">Seleccionar</button>
+                        <a href="#destino__seleccionado"><button class="destino__btn" value=6
+                                id="btn7">Seleccionar</button></a>
                     </div>
                 </li>
                 <!---===== CANCUNN =====-->
@@ -193,7 +200,8 @@
                     <div class="destino__container">
                         <p class="destino__nombre">Cancun</p>
                         <p class="destino__precio">Precio: $150.000</p>
-                        <button class="destino__btn" value=7 id="btn8">Seleccionar</button>
+                        <a href="#destino__seleccionado"><button class="destino__btn" value=7
+                                id="btn8">Seleccionar</button></a>
                     </div>
                 </li>
                 <!--======== MARBELLA ========-->
@@ -202,7 +210,8 @@
                     <div class="destino__container">
                         <p class="destino__nombre">Marbella</p>
                         <p class="destino__precio">Precio: $200.000</p>
-                        <button class="destino__btn" value=8 id="btn9">Seleccionar</button>
+                        <a href="#destino__seleccionado"> <button class="destino__btn" value=8
+                                id="btn9">Seleccionar</button></a>
                     </div>
                 </li>
             </ul>
@@ -225,7 +234,18 @@
                     </h2>
                     <button class="btn__reserva" id="reservas__btn">Mostrar Reservas</button>
                 </div>
-                <div id="reservas__hechas" class="reservas__hechas"></div>
+                <div id="reservas__hechas" class="reservas__hechas">
+                    <div class="reservas__overlay"></div>
+
+                    <div class="reservas__modal">
+                        <h2>ViajaYa</h2>
+                        <p>Gracias por comprar tu destino con ViajaYa, que lo disfrutes.</p>
+                        <button class="borrar">X</button>
+                    </div>
+
+                </div>
+                <button class="btn__reserva" id="compra">Comprar</button>
+
             </div>
 
 

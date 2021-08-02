@@ -200,15 +200,15 @@ const URL = "https://www.dolarsi.com/api/api.php?type=valoresprincipales"
 
 //INICIO DE FUNCION DE TIPO DE CAMBIOS
 
-$(document).ready(function(){
- 
-    function tipoDeDolar(tipodedolar){
-               //LLAMADO AL URL DE LA API Y COMIENZO DE FUNCION DE LA MISMA
-        $.get(URL, function(datos) {
+$(document).ready(function () {
 
-            for(dato of datos) {
+    function tipoDeDolar(tipodedolar) {
+        //LLAMADO AL URL DE LA API Y COMIENZO DE FUNCION DE LA MISMA
+        $.get(URL, function (datos) {
+
+            for (dato of datos) {
                 //DOLAR OFICIAL
-                if(dato.casa.nombre === 'Dolar Oficial'){
+                if (dato.casa.nombre === 'Dolar Oficial') {
                     $('#lista__dolares').append(
                         `
                         <div class="d-contenedor">
@@ -221,9 +221,9 @@ $(document).ready(function(){
     
                         `
                     )
-                } 
+                }
                 /// DOLAR BLUE
-                else if (dato.casa.nombre === 'Dolar Blue'){
+                else if (dato.casa.nombre === 'Dolar Blue') {
                     $('#lista__dolares').append(
                         `
                         <div class="d-contenedor">
@@ -238,7 +238,7 @@ $(document).ready(function(){
                     )
                 }
                 // DOLAR BOLSA
-                else if (dato.casa.nombre === 'Dolar Bolsa'){
+                else if (dato.casa.nombre === 'Dolar Bolsa') {
                     $('#lista__dolares').append(
                         `
                         <div class="d-contenedor">
@@ -251,15 +251,33 @@ $(document).ready(function(){
     
                         `
                     )
-                }
-
-                else{
+                } else {
                     console.log('no funca');
                 }
-                
+
             }
         });
     }
-   
+
     tipoDeDolar();
-})
+});
+
+
+// VENTANA MODAL SE ABRE AL HACER CLICK
+
+$(document).ready(function(){
+
+    $("#compra").on("click", function () {
+        $(".reservas__overlay, .reservas__modal").addClass("active");
+    });
+    
+    $(".borrar, .reservas__overlay").on("click", function () {
+        $(".reservas__overlay, .reservas__modal").removeClass("active");
+    });
+    
+    $(document).keyup(function (e) {
+        if (e.keyCode === 27) {
+            $(".reservas__overlay, .reservas__modal").removeClass("active");
+        }
+    });
+});

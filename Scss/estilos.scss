@@ -46,7 +46,8 @@ body {
 h2,
 h3,
 p {
-    color: $colorTextos;;
+    color: $colorTextos;
+    ;
 }
 
 ol,
@@ -460,7 +461,8 @@ input:checked+.slider:before {
 
     &__btn {
         grid-area: btn;
-        height: 30px;
+        height: 1.875rem;
+        width: 6.25rem;
         color: #fff;
         background-color: $colorPrincipal;
         border: none;
@@ -647,7 +649,66 @@ input:checked+.slider:before {
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
-        padding:0.625rem;
+        padding: 0.625rem;
+    }
+
+    &__modal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.875rem;
+        max-height: calc(100% - 100px);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 23.75rem;
+        max-width: 31.25rem;
+        transform: translate(-50%, -50%);
+        color: $colorPrincipal;
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        z-index: 3000;
+        visibility: hidden;
+        opacity: 0;
+        transition: .5s ease;
+    }
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: .5s ease;
+        z-index: -1;
+    }
+
+    &__overlay.active {
+        opacity: 1;
+        z-index: 1031;
+    }
+
+    &__modal h2 {
+        margin: 0;
+        font-weight: 400;
+        padding: 1rem;
+        border-bottom: 1px solid $colorPrincipal;
+        color: $colorPrincipal;
+    }
+
+    &__modal p{
+        color:$colorTerciario;
+        font-size: 1.2rem;
+        padding: 0.625rem;
+        text-align: center;
+    }
+
+    &__modal.active {
+        visibility: visible;
+        opacity: 1;
     }
 }
 

@@ -804,6 +804,63 @@ input:checked+.slider:before {
     border-bottom: 1px solid rgb(148, 148, 148);
 }
 
+.reservas__modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    max-height: calc(100% - 100px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 23.75rem;
+    max-width: 31.25rem;
+    transform: translate(-50%, -50%);
+    background: #14505c;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    z-index: 3000;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.reservas__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: .5s ease;
+    z-index: -1;
+}
+
+.reservas__overlay.active {
+    opacity: 1;
+    z-index: 1031;
+}
+
+.reservas__modal h2 {
+    margin: 0;
+    font-weight: 400;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    color: #ccc;
+}
+
+.reservas__modal p{
+    color:#ccc;
+    font-size: 1.2rem;
+    padding: 0.625rem;
+    text-align: center;
+}
+
+.reservas__modal.active {
+    visibility: visible;
+    opacity: 1;
+}
 .reservacionHecha {
     display: flex;
     flex-direction: column;
