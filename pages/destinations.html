@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Todos los destinos ViajaYa — filtrá por playa, ciudad, naturaleza o cultura." />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400;1,6..72,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/main.scss" />
+    <title>ViajaYa — Destinos</title>
+    <script type="module" src="/src/destinations-page.ts"></script>
+  </head>
+  <body>
+    <header class="navbar" data-navbar>
+      <div class="navbar__inner">
+        <a href="/index.html" class="navbar__logo">ViajaYa</a>
+        <button
+          type="button"
+          class="navbar__toggle"
+          data-nav-trigger
+          aria-expanded="false"
+          aria-controls="nav-drawer"
+          aria-label="Abrir menú"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+        </button>
+        <nav class="navbar__menu" aria-label="Principal">
+          <a href="/index.html">Inicio</a>
+          <a href="/pages/destinations.html" aria-current="page">Destinos</a>
+          <a href="/pages/quote.html">Cotizar</a>
+          <a href="/pages/contact.html">Contacto</a>
+        </nav>
+        <div class="navbar__actions">
+          <button type="button" class="navbar__icon-btn" data-theme-toggle aria-label="Cambiar tema">
+            <span class="material-symbols-outlined" aria-hidden="true">dark_mode</span>
+          </button>
+          <a href="/pages/reservations.html" class="navbar__icon-btn" aria-label="Mis viajes guardados">
+            <span class="material-symbols-outlined" aria-hidden="true">bookmark</span>
+            <span class="navbar__badge" data-res-badge></span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <button type="button" class="nav-overlay" data-nav-overlay hidden aria-hidden="true"></button>
+    <nav id="nav-drawer" class="nav-drawer" data-nav-drawer aria-hidden="true" aria-label="Menú móvil">
+      <ul class="nav-drawer__list">
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/pages/destinations.html" aria-current="page">Destinos</a></li>
+        <li><a href="/pages/quote.html">Cotizar</a></li>
+        <li><a href="/pages/contact.html">Contacto</a></li>
+        <li><a href="/pages/reservations.html">Mis viajes</a></li>
+      </ul>
+    </nav>
+
+    <main class="page-main section container">
+      <h1 class="page-title-block">Destinos</h1>
+      <p class="small page-intro" data-page-intro></p>
+      <div class="filter-bar" data-filter-bar role="group" aria-label="Filtrar por categoría">
+        <button type="button" class="tag tag--active" data-filter="all">Todos</button>
+        <button type="button" class="tag" data-filter="beach">Playa</button>
+        <button type="button" class="tag" data-filter="city">Ciudad</button>
+        <button type="button" class="tag" data-filter="nature">Naturaleza</button>
+        <button type="button" class="tag" data-filter="culture">Cultura</button>
+      </div>
+      <div class="grid-cards" data-dest-grid-all></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__copy">© <span data-footer-year></span> ViajaYa</p>
+        <div class="site-footer__links">
+          <a href="#">Legal</a>
+          <a href="#">Privacidad</a>
+          <a href="/pages/contact.html">Contacto</a>
+          <a href="/pages/destinations.html">Destinos</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

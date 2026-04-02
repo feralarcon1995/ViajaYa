@@ -1,0 +1,64 @@
+:root {
+  --color-bg: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-surface-raised: #f0f2f4;
+  --color-border: rgba(25, 28, 29, 0.1);
+  --color-border-strong: rgba(25, 28, 29, 0.2);
+  --color-accent: #041627;
+  --color-accent-hover: #1a2b3c;
+  --color-accent-dim: #b7c8de;
+  --color-text-primary: #191c1d;
+  --color-text-secondary: #44474c;
+  --color-text-on-accent: #ffffff;
+  --color-danger: #ba1a1a;
+  --color-danger-surface: #ffdad6;
+  --color-success: #1a6b3a;
+  --color-success-surface: #d4edda;
+  --color-on-danger: #ffffff;
+  --color-on-image-bg: rgba(255, 255, 255, 0.15);
+  --color-on-image-border: rgba(255, 255, 255, 0.2);
+  --color-on-image-fg: #ffffff;
+  --color-hero-overlay: rgba(4, 22, 39, 0.55);
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 3px rgba(25, 28, 29, 0.08), 0 1px 2px rgba(25, 28, 29, 0.04);
+  --shadow-md: 0 20px 40px rgba(25, 28, 29, 0.08), 0 4px 12px rgba(25, 28, 29, 0.04);
+  --font-display: 'Newsreader', serif;
+  --font-body: 'Inter', sans-serif;
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+[data-theme='dark'] {
+  --color-bg: #05101a;
+  --color-surface: #0d1f2d;
+  --color-surface-raised: #152536;
+  --color-border: rgba(183, 200, 222, 0.1);
+  --color-border-strong: rgba(183, 200, 222, 0.2);
+  --color-accent: #b7c8de;
+  --color-accent-hover: #d2e4fb;
+  --color-accent-dim: #4f6073;
+  --color-text-primary: #e8ecf0;
+  --color-text-secondary: #8fa3b8;
+  --color-text-on-accent: #041627;
+  --color-danger: #ffb4ab;
+  --color-danger-surface: #93000a;
+  --color-success: #7dd4a0;
+  --color-success-surface: #0d3320;
+  --color-on-danger: #041627;
+  --color-on-image-bg: rgba(4, 22, 39, 0.35);
+  --color-on-image-border: rgba(183, 200, 222, 0.25);
+  --color-on-image-fg: #e8ecf0;
+  --color-hero-overlay: rgba(4, 22, 39, 0.65);
+}

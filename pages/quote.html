@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cotizá tu viaje con ViajaYa" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400;1,6..72,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/main.scss" />
+    <title>ViajaYa — Cotizar</title>
+    <script type="module" src="/src/quote.ts"></script>
+  </head>
+  <body class="page-quote">
+    <div id="live-region" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+    <header class="navbar" data-navbar>
+      <div class="navbar__inner">
+        <a href="/index.html" class="navbar__logo">ViajaYa</a>
+        <button
+          type="button"
+          class="navbar__toggle"
+          data-nav-trigger
+          aria-expanded="false"
+          aria-controls="nav-drawer"
+          aria-label="Abrir menú"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+        </button>
+        <nav class="navbar__menu" aria-label="Principal">
+          <a href="/index.html">Inicio</a>
+          <a href="/pages/destinations.html">Destinos</a>
+          <a href="/pages/quote.html" aria-current="page">Cotizar</a>
+          <a href="/pages/contact.html">Contacto</a>
+        </nav>
+        <div class="navbar__actions">
+          <button type="button" class="navbar__icon-btn" data-theme-toggle aria-label="Cambiar tema">
+            <span class="material-symbols-outlined" aria-hidden="true">dark_mode</span>
+          </button>
+          <a href="/pages/reservations.html" class="navbar__icon-btn" aria-label="Mis viajes guardados">
+            <span class="material-symbols-outlined" aria-hidden="true">bookmark</span>
+            <span class="navbar__badge" data-res-badge></span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <button type="button" class="nav-overlay" data-nav-overlay hidden aria-hidden="true"></button>
+    <nav id="nav-drawer" class="nav-drawer" data-nav-drawer aria-hidden="true" aria-label="Menú móvil">
+      <ul class="nav-drawer__list">
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/pages/destinations.html">Destinos</a></li>
+        <li><a href="/pages/quote.html" aria-current="page">Cotizar</a></li>
+        <li><a href="/pages/contact.html">Contacto</a></li>
+        <li><a href="/pages/reservations.html">Mis viajes</a></li>
+      </ul>
+    </nav>
+
+    <main class="page-main quote-page">
+      <div class="quote-page__inner">
+        <div class="quote-page__grid">
+          <div class="quote-page__form-col">
+            <header class="quote-page__intro">
+              <h1>Finalizá tu relato</h1>
+              <p>
+                Elegí destino, completá tus datos y preferencias. Te mostramos la cotización en pesos con referencia al
+                dólar blue.
+              </p>
+            </header>
+
+            <form id="quote-form" class="quote-page__form" novalidate>
+              <section class="quote-section" aria-labelledby="quote-s1">
+                <div class="quote-section__head">
+                  <span class="quote-section__num" aria-hidden="true">01</span>
+                  <h2 id="quote-s1">Selección de destino</h2>
+                </div>
+                <div class="quote-dest-grid" data-quote-destinations></div>
+              </section>
+
+              <section class="quote-section" aria-labelledby="quote-s2">
+                <div class="quote-section__head">
+                  <span class="quote-section__num" aria-hidden="true">02</span>
+                  <h2 id="quote-s2">Información del viajero</h2>
+                </div>
+                <div class="quote-fields-grid">
+                  <div class="quote-field">
+                    <label for="q-nombre">Nombre</label>
+                    <input id="q-nombre" name="nombre" type="text" class="input" autocomplete="given-name" required />
+                    <span class="quote-field__error" role="alert" data-err-nombre hidden></span>
+                  </div>
+                  <div class="quote-field">
+                    <label for="q-apellido">Apellido</label>
+                    <input
+                      id="q-apellido"
+                      name="apellido"
+                      type="text"
+                      class="input"
+                      autocomplete="family-name"
+                      required
+                    />
+                    <span class="quote-field__error" role="alert" data-err-apellido hidden></span>
+                  </div>
+                  <div class="quote-field">
+                    <label for="q-edad">Edad</label>
+                    <input
+                      id="q-edad"
+                      name="edad"
+                      type="number"
+                      class="input"
+                      min="1"
+                      max="99"
+                      inputmode="numeric"
+                      required
+                    />
+                    <span class="quote-field__error" role="alert" data-err-edad hidden></span>
+                  </div>
+                  <div class="quote-field">
+                    <label for="q-email">Correo electrónico</label>
+                    <input id="q-email" name="email" type="email" class="input" autocomplete="email" required />
+                    <span class="quote-field__error" role="alert" data-err-email hidden></span>
+                  </div>
+                </div>
+              </section>
+
+              <section class="quote-section" aria-labelledby="quote-s3">
+                <div class="quote-section__head">
+                  <span class="quote-section__num" aria-hidden="true">03</span>
+                  <h2 id="quote-s3">Preferencias de viaje</h2>
+                </div>
+                <div class="quote-fields-grid quote-fields-grid--prefs">
+                  <div class="quote-field">
+                    <label for="q-dias">Estadía (días)</label>
+                    <select id="q-dias" name="dias" class="select" required></select>
+                  </div>
+                  <div class="quote-field">
+                    <label for="q-clase">Clase de vuelo</label>
+                    <select id="q-clase" name="clase" class="select" required>
+                      <option value="economica">Económica</option>
+                      <option value="ejecutiva">Ejecutiva</option>
+                      <option value="primera">Primera</option>
+                    </select>
+                  </div>
+                  <div class="quote-field">
+                    <label for="q-comida">Comidas</label>
+                    <select id="q-comida" name="comida" class="select" required>
+                      <option value="sin-comidas">Sin comidas</option>
+                      <option value="desayuno">Desayuno</option>
+                      <option value="todo-incluido">Todo incluido</option>
+                    </select>
+                  </div>
+                </div>
+              </section>
+            </form>
+          </div>
+
+          <aside class="quote-page__aside" aria-label="Resumen de cotización">
+            <div class="quote-summary">
+              <div class="quote-summary__texture" aria-hidden="true"></div>
+              <h2 class="quote-summary__title">Cotización de viaje</h2>
+              <div class="quote-summary__block">
+                <div class="quote-summary__row">
+                  <div>
+                    <p class="quote-summary__label">Destino elegido</p>
+                    <p class="quote-summary__dest" data-sum-dest>—</p>
+                  </div>
+                  <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                </div>
+                <div class="quote-summary__row">
+                  <div>
+                    <p class="quote-summary__label">Plan</p>
+                    <p class="quote-summary__stay" data-sum-stay-detail>—</p>
+                  </div>
+                </div>
+                <div class="quote-summary__lines">
+                  <div class="quote-summary__line">
+                    <span>Subtotal neto</span>
+                    <span data-sum-sub>—</span>
+                  </div>
+                  <div class="quote-summary__discount" data-quote-discount-row hidden>
+                    <div>
+                      <span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span>
+                      <span>Bonificación larga estadía (10%)</span>
+                    </div>
+                    <span data-sum-discount-ars>—</span>
+                  </div>
+                  <div class="quote-summary__total-block">
+                    <div class="quote-summary__total-head">
+                      <span>Inversión total</span>
+                      <span class="quote-summary__blue" data-sum-blue-rate></span>
+                    </div>
+                    <div class="quote-summary__total-row">
+                      <p class="quote-summary__total-ars" data-sum-total>—</p>
+                      <p class="quote-summary__total-usd" data-sum-usd>—</p>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="quote-summary__cta" data-buy-btn>Confirmar y reservar</button>
+                <p class="quote-summary__legal">
+                  Al confirmar, aceptás las
+                  <a href="#">políticas de cancelación</a>
+                  y los
+                  <a href="#">términos del servicio</a>.
+                </p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__copy">© <span data-footer-year></span> ViajaYa</p>
+        <div class="site-footer__links">
+          <a href="#">Legal</a>
+          <a href="#">Privacidad</a>
+          <a href="/pages/contact.html">Contacto</a>
+          <a href="/pages/destinations.html">Destinos</a>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal"
+      id="quote-modal"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+      aria-hidden="true"
+    >
+      <button type="button" class="modal__overlay" data-modal-overlay tabindex="-1" aria-label="Cerrar"></button>
+      <div class="modal__dialog">
+        <h2 id="modal-title" class="modal__title">¡Gracias por tu compra!</h2>
+        <div class="modal__body" data-modal-summary></div>
+        <div class="modal__footer">
+          <button type="button" class="btn btn--primary" data-modal-close>Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
